@@ -1,2 +1,2 @@
 # Android
-Partie Android du projet alarme
+Branche pour le microcontrolleur
