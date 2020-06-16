@@ -2,6 +2,7 @@
 #include <QtQml/QQmlApplicationEngine>
 #include <QtQml/QQmlContext>
 #include <QTcpSocket>
+
 //#include <wiringPi.h>
 
 #include "interface.h"
@@ -44,7 +45,7 @@ void  Interface::init(){
 
 void Interface::luxDetect(){
     qDebug() << Q_FUNC_INFO;
-    QString messageLux = "Il y'à détection par le capteur de lumière";
+    QString messageLux = "Il y'a détection par le capteur de lumière";
 
     QObject* rootItem = (QObject*)rootObject();                      // l'objet root est l'objet le plus haut soit la Window (l'Item). Il est indsipensable
     QObject* txtLux = rootItem->findChild<QObject*>("sensorLuxValue");
@@ -60,7 +61,7 @@ void Interface::luxDetect(){
 void Interface::soundDetect(){
 
     qDebug() << Q_FUNC_INFO;
-    QString messageSound = "Il y'à détection par le capteur à ultrason";
+    QString messageSound = "Il y'a détection par le capteur à ultrason";
 
     QObject* rootItem = (QObject*)rootObject();                      // l'objet root est l'objet le plus haut soit la Window (l'Item). Il est indsipensable de créer un Item à la racine pour utiliser la fct findChild (création de l'item Parent pour appeller un item fille)
     QObject* txtSound = rootItem->findChild<QObject*>("sensorSoundValue");
@@ -138,6 +139,16 @@ void Interface::socketStateChanged(QAbstractSocket::SocketState socketState){
 void Interface::socketDisconnected(){
 
     qDebug() << "Socket déconnecter";
+}
+
+void Interface::displayArchive(){
+    static bool opacity = true;
+
+    QObject* rootItem = (QObject*)rootObject();                      // l'objet root est l'objet le plus haut soit la Window (l'Item). Il est indsipensable
+    QObject* archiveButton = rootItem->findChild<QObject*>("swipeArchive");
+    archiveButton->setProperty("opacity", opacity);
+    opacity = !opacity;
+
 }
 
 

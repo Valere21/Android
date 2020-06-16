@@ -2,12 +2,14 @@
 #include <QtGui/QGuiApplication>
 #include <QtQml/QQmlApplicationEngine>
 #include <QtQml/QQmlContext>
-
+#include "archive.h"
 #include "interface.h"
 
 
 Interface::Interface(QWindow *parent) : QQuickView(parent)
 {
+    Archive ObjArchive;
+
 
     setResizeMode(QQuickView::SizeRootObjectToView);
 

@@ -33,12 +33,13 @@ Item {                                                          //Un item est n√
         Text {
             id: texteServeur
             text: qsTr("Serveur")
+            font.bold: true
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             Layout.fillHeight: true
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             Layout.fillWidth: true
-            font.pixelSize: 12
+            font.pixelSize: 14
         }
 
     }
@@ -97,7 +98,7 @@ Item {                                                          //Un item est n√
         id: statusIndicator
         objectName: "luxIndicator"
         x: window.width*0.35
-        y: window.height*0.2
+        y: window.height*0.3
         active: false
     }
 
@@ -105,16 +106,78 @@ Item {                                                          //Un item est n√
         id: statusIndicator1
         objectName: "soundIndicator"
         x: window.width*0.85
-        y: window.height*0.2
+        y: window.height*0.3
         active: false
 
     }
 
+    Button {
+        id: buttonArchive
+        x: parent.width*0.05
+        y: parent.height*0.4
+        anchors.left: parent.left*0.2
+        anchors.bottom: parent.top*0.2
+        text: qsTr("Archive")
+        onClicked: cpp.displayArchive()
+
+    }
 
 
+    SwipeView {
 
+        id: swipeView
+        objectName: "swipeArchive"
+        anchors.left: buttonArchive.right
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        opacity: 0
+        x: 217
+        y: 135
+        width: buttonArchive.right*0.9
+        height: parent.height*0.60
+        clip: true
+
+        Repeater {
+
+            model: 30
+
+            PageArchive{
+
+                anchors.fill: swipeView
+            }
+
+        }
+    }
 }
 
+
+
+
+            /* delegate:   Page {
+                width: swipeView.width
+                height: swipeView.height
+
+                header: Label {
+                    text: qsTr("Page " + index)
+                    color : "lightBlue"
+                    font.pointSize: 13
+                    padding: 10
+                }
+
+
+                Rectangle {
+                    border.width: 1
+                    border.color: "blue"
+                    anchors.fill: parent
+                    color: colorModel[i]
+
+                }
+
+                Label {
+                    text: qsTr("You are on Page " + index)
+                    anchors.centerIn: parent
+                }
+            }*/
 
 
 

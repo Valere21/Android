@@ -63,6 +63,17 @@ public slots:
     void socketDisconnected();
 
 
+    void displayArchive();
+
+
+
+
+
+
+
+
+
+
 
 private slots:
     void    viewChanger(int id);
