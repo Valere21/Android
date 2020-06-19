@@ -35,7 +35,7 @@ int main()
         if (analog < 0.2 && analog2 < 0.2) {                        // Capteur 1 et 2 doit être inférieur à 660mV
             sortie = 0;                                             // Eteins la led
             detect2 = 0;                                            // Met la valeur à 0
-            sprintf(str2, "lumiere:%d", detect2);                   // Envoie sur la raspberry "lumière:" ainsi que la valeur 0
+            sprintf(str2, "lumiere:%d\0", detect2);                   // Envoie sur la raspberry "lumière:" ainsi que la valeur 0
             envoie.puts(str2);
             wait(0.2);                                            
         }
@@ -44,7 +44,7 @@ int main()
 
             sortie = 1;                                             // Allume la led
             detect2 = 1;                                            // Met la valeur à 1
-            sprintf(str2, "lumiere:%d", detect2);
+            sprintf(str2, "lumiere:%d\0", detect2);
             envoie.puts(str2);                                      // Envoie sur la raspberry "lumière:" ainsi que la valeur 1
 
             wait(0.2);                                             
@@ -57,7 +57,7 @@ int main()
             pc.puts(str);
             srf.startRanging();                                     // Re-start de la fonction pour la prochaine valeur
             detect = 0;
-            sprintf(str, "ultrason:%d", detect);                    // Envoie sur la raspberry "ultrason:" ainsi que la valeur 0
+            sprintf(str, "ultrason:%d\0", detect);                    // Envoie sur la raspberry "ultrason:" ainsi que la valeur 0
             envoie.puts(str);
             wait(0.2);
 
@@ -73,7 +73,7 @@ int main()
             sprintf(str, "%d cm enregistre / detection!\n\r", dif);  // Débug pour USB
             pc.puts(str);
             detect = 1;
-            sprintf(str, "ultrason:%d", detect);                     // Envoie sur la raspberry "ultrason:" ainsi que la valeur 1
+            sprintf(str, "ultrason:%d\0", detect);                     // Envoie sur la raspberry "ultrason:" ainsi que la valeur 1
             envoie.puts(str);
             wait(0.2);
 
