@@ -7,7 +7,7 @@
 #include <QtQuick/QQuickView>
 #include <QtQml/QQmlApplicationEngine>
 #include <QtQml/QQmlContext>
-
+#include "serial.h"
 #include <QTcpSocket>
 
 
@@ -41,6 +41,7 @@ private slots:
 
     protected:
     int m_pageId;
+    Serial lecture;
 
     QTcpSocket *m_socketClient;
 };
