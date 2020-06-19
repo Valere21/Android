@@ -13,8 +13,8 @@ Interface::Interface(QWindow *parent) : QQuickView(parent)
 
     rootContext()->setContextProperty("cpp", this); // uncomment this line to use c++ function from QML
     viewChanger(V_MAIN);
-    init();
     Serial lecture;
+    init();
     show();
 }
 
