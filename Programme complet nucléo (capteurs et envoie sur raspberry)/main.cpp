@@ -57,7 +57,7 @@ int main()
             pc.puts(str);
             srf.startRanging();                                     // Re-start de la fonction pour la prochaine valeur
             detect = 0;
-            sprintf(str, "ultrason:%d\0", detect);                    // Envoie sur la raspberry "ultrason:" ainsi que la valeur 0
+            sprintf(str, "ultrason:%d\0", detect);                  // Envoie sur la raspberry "ultrason:" ainsi que la valeur 0
             envoie.puts(str);
             wait(0.2);
 
@@ -73,7 +73,7 @@ int main()
             sprintf(str, "%d cm enregistre / detection!\n\r", dif);  // Débug pour USB
             pc.puts(str);
             detect = 1;
-            sprintf(str, "ultrason:%d\0", detect);                     // Envoie sur la raspberry "ultrason:" ainsi que la valeur 1
+            sprintf(str, "ultrason:%d\0", detect);                   // Envoie sur la raspberry "ultrason:" ainsi que la valeur 1
             envoie.puts(str);
             wait(0.2);
 
