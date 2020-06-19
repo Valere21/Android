@@ -948,8 +948,14 @@ interface.o: interface.cpp ../raspi/qt5pi/include/QtGui/QGuiApplication \
 		../raspi/qt5pi/include/QtQml/qqmlerror.h \
 		../raspi/qt5pi/include/QtQml/QQmlContext \
 		../raspi/qt5pi/include/QtQml/qqmlcontext.h \
-		interface.h \
+		serial.h \
 		../raspi/qt5pi/include/QtCore/QObject \
+		../raspi/qt5pi/include/QtSerialPort/QSerialPort \
+		../raspi/qt5pi/include/QtSerialPort/qserialport.h \
+		../raspi/qt5pi/include/QtSerialPort/qserialportglobal.h \
+		../raspi/qt5pi/include/QtSerialPort/QSerialPortInfo \
+		../raspi/qt5pi/include/QtSerialPort/qserialportinfo.h \
+		interface.h \
 		../raspi/qt5pi/include/QtQuick/QQuickView \
 		../raspi/qt5pi/include/QtQuick/qquickview.h \
 		../raspi/qt5pi/include/QtQuick/qquickwindow.h \
