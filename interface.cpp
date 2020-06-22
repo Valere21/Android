@@ -2,7 +2,6 @@
 #include <QtGui/QGuiApplication>
 #include <QtQml/QQmlApplicationEngine>
 #include <QtQml/QQmlContext>
-#include "serial.h"
 #include "interface.h"
 
 
@@ -13,7 +12,6 @@ Interface::Interface(QWindow *parent) : QQuickView(parent)
 
     rootContext()->setContextProperty("cpp", this); // uncomment this line to use c++ function from QML
     viewChanger(V_MAIN);
-    Serial lecture;
     init();
     show();
 }

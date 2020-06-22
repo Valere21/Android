@@ -1,6 +1,5 @@
 QT += quick
 QT += qml
-QT += serialport
 QT += network
 CONFIG += c++11
 
@@ -19,8 +18,7 @@ SOURCES += \
         interface.cpp \
         interfacefunc.cpp \
         interfaceview.cpp \
-        main.cpp \
-        serial.cpp
+        main.cpp
 
 RESOURCES += qml.qrc
 
@@ -36,5 +34,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    interface.h \
-    serial.h
+    interface.h
