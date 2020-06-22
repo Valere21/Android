@@ -772,6 +772,12 @@ moc_interface.cpp: interface.h \
 		../raspi/qt5pi/include/QtQml/qqmlerror.h \
 		../raspi/qt5pi/include/QtQml/QQmlContext \
 		../raspi/qt5pi/include/QtQml/qqmlcontext.h \
+		serial.h \
+		../raspi/qt5pi/include/QtSerialPort/QSerialPort \
+		../raspi/qt5pi/include/QtSerialPort/qserialport.h \
+		../raspi/qt5pi/include/QtSerialPort/qserialportglobal.h \
+		../raspi/qt5pi/include/QtSerialPort/QSerialPortInfo \
+		../raspi/qt5pi/include/QtSerialPort/qserialportinfo.h \
 		../raspi/qt5pi/include/QtNetwork/QTcpSocket \
 		../raspi/qt5pi/include/QtNetwork/qtcpsocket.h \
 		../raspi/qt5pi/include/QtNetwork/qabstractsocket.h \
@@ -1167,6 +1173,12 @@ interfacefunc.o: interfacefunc.cpp ../raspi/qt5pi/include/QtGui/QGuiApplication 
 		../raspi/qt5pi/include/QtCore/qfiledevice.h \
 		../raspi/qt5pi/include/QtGui/qvector2d.h \
 		../raspi/qt5pi/include/QtGui/qtouchdevice.h \
+		serial.h \
+		../raspi/qt5pi/include/QtSerialPort/QSerialPort \
+		../raspi/qt5pi/include/QtSerialPort/qserialport.h \
+		../raspi/qt5pi/include/QtSerialPort/qserialportglobal.h \
+		../raspi/qt5pi/include/QtSerialPort/QSerialPortInfo \
+		../raspi/qt5pi/include/QtSerialPort/qserialportinfo.h \
 		../raspi/qt5pi/include/QtNetwork/QTcpSocket \
 		../raspi/qt5pi/include/QtNetwork/qtcpsocket.h \
 		../raspi/qt5pi/include/QtNetwork/qabstractsocket.h
@@ -1323,6 +1335,12 @@ interfaceview.o: interfaceview.cpp ../raspi/qt5pi/include/QtGui/QGuiApplication 
 		../raspi/qt5pi/include/QtCore/qfiledevice.h \
 		../raspi/qt5pi/include/QtGui/qvector2d.h \
 		../raspi/qt5pi/include/QtGui/qtouchdevice.h \
+		serial.h \
+		../raspi/qt5pi/include/QtSerialPort/QSerialPort \
+		../raspi/qt5pi/include/QtSerialPort/qserialport.h \
+		../raspi/qt5pi/include/QtSerialPort/qserialportglobal.h \
+		../raspi/qt5pi/include/QtSerialPort/QSerialPortInfo \
+		../raspi/qt5pi/include/QtSerialPort/qserialportinfo.h \
 		../raspi/qt5pi/include/QtNetwork/QTcpSocket \
 		../raspi/qt5pi/include/QtNetwork/qtcpsocket.h \
 		../raspi/qt5pi/include/QtNetwork/qabstractsocket.h
@@ -1479,6 +1497,12 @@ main.o: main.cpp ../raspi/qt5pi/include/QtGui/QGuiApplication \
 		../raspi/qt5pi/include/QtGui/qtouchdevice.h \
 		../raspi/qt5pi/include/QtQml/QQmlContext \
 		../raspi/qt5pi/include/QtQml/qqmlcontext.h \
+		serial.h \
+		../raspi/qt5pi/include/QtSerialPort/QSerialPort \
+		../raspi/qt5pi/include/QtSerialPort/qserialport.h \
+		../raspi/qt5pi/include/QtSerialPort/qserialportglobal.h \
+		../raspi/qt5pi/include/QtSerialPort/QSerialPortInfo \
+		../raspi/qt5pi/include/QtSerialPort/qserialportinfo.h \
 		../raspi/qt5pi/include/QtNetwork/QTcpSocket \
 		../raspi/qt5pi/include/QtNetwork/qtcpsocket.h \
 		../raspi/qt5pi/include/QtNetwork/qabstractsocket.h
