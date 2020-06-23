@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name Ras-rescue)(type Legacy)(uri ${KIPRJMOD}/Ras-rescue.lib)(options "")(descr ""))
-)
